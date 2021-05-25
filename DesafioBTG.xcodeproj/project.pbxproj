@@ -97,8 +97,8 @@
 		E9155308265CA38E0075EC23 /* DesafioBTG */ = {
 			isa = PBXGroup;
 			children = (
-				E9155309265CA38E0075EC23 /* AppDelegate.swift */,
-				E915530B265CA38E0075EC23 /* SceneDelegate.swift */,
+				E915533A265CA6DD0075EC23 /* Application */,
+				E9155339265CA6D10075EC23 /* Commons */,
 				E915530D265CA38E0075EC23 /* ViewController.swift */,
 				E9155312265CA3900075EC23 /* Assets.xcassets */,
 				E9155314265CA3900075EC23 /* LaunchScreen.storyboard */,
@@ -123,6 +123,22 @@
 				E915532D265CA3910075EC23 /* Info.plist */,
 			);
 			path = DesafioBTGUITests;
+			sourceTree = "<group>";
+		};
+		E9155339265CA6D10075EC23 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		E915533A265CA6DD0075EC23 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E9155309265CA38E0075EC23 /* AppDelegate.swift */,
+				E915530B265CA38E0075EC23 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
