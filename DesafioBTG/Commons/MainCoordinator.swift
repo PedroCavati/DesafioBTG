@@ -18,4 +18,8 @@ class MainCoordinator: Coordinator {
         let conversionModule = moduleFactory.makeConversionModule()
     }
     
+    func telaNova() {
+        let telaNova = moduleFactory.makeCurrencyModule()
+    }
+    
 }

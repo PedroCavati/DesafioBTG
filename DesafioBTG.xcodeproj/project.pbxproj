@@ -19,6 +19,11 @@
 		E9155343265CAFAB0075EC23 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9155342265CAFAB0075EC23 /* ModuleFactory.swift */; };
 		E9155348265CB1390075EC23 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9155347265CB1390075EC23 /* CurrencyViewController.swift */; };
 		E915534A265CB15A0075EC23 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9155349265CB15A0075EC23 /* ConversionViewController.swift */; };
+		E995493C265D6C6B00588F44 /* BTGConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E995493B265D6C6B00588F44 /* BTGConversionService.swift */; };
+		E995493F265D6E1300588F44 /* QuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E995493E265D6E1300588F44 /* QuotesModel.swift */; };
+		E9954941265D6E7600588F44 /* CurrenciesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954940265D6E7600588F44 /* CurrenciesModel.swift */; };
+		E9954943265D6ED900588F44 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954942265D6ED900588F44 /* Endpoint.swift */; };
+		E9954945265D7F4900588F44 /* BTGNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954944265D7F4900588F44 /* BTGNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		E9155342265CAFAB0075EC23 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
 		E9155347265CB1390075EC23 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		E9155349265CB15A0075EC23 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		E995493B265D6C6B00588F44 /* BTGConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTGConversionService.swift; sourceTree = "<group>"; };
+		E995493E265D6E1300588F44 /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
+		E9954940265D6E7600588F44 /* CurrenciesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesModel.swift; sourceTree = "<group>"; };
+		E9954942265D6ED900588F44 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E9954944265D7F4900588F44 /* BTGNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTGNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +122,9 @@
 				E915533A265CA6DD0075EC23 /* Application */,
 				E9155339265CA6D10075EC23 /* Commons */,
 				E9155314265CA3900075EC23 /* LaunchScreen.storyboard */,
+				E995493D265D6E0900588F44 /* Models */,
 				E9155344265CB0FC0075EC23 /* Modules */,
+				E9DA2024265D5B91009693A9 /* Service */,
 			);
 			path = DesafioBTG;
 			sourceTree = "<group>";
@@ -186,6 +198,25 @@
 				E9155347265CB1390075EC23 /* CurrencyViewController.swift */,
 			);
 			path = CurrencyModule;
+			sourceTree = "<group>";
+		};
+		E995493D265D6E0900588F44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E995493E265D6E1300588F44 /* QuotesModel.swift */,
+				E9954940265D6E7600588F44 /* CurrenciesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9DA2024265D5B91009693A9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E995493B265D6C6B00588F44 /* BTGConversionService.swift */,
+				E9954942265D6ED900588F44 /* Endpoint.swift */,
+				E9954944265D7F4900588F44 /* BTGNetworking.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +348,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9954941265D6E7600588F44 /* CurrenciesModel.swift in Sources */,
+				E995493F265D6E1300588F44 /* QuotesModel.swift in Sources */,
 				E915533E265CAD270075EC23 /* MainCoordinator.swift in Sources */,
+				E9954945265D7F4900588F44 /* BTGNetworking.swift in Sources */,
 				E9155348265CB1390075EC23 /* CurrencyViewController.swift in Sources */,
 				E9155341265CAF600075EC23 /* Coordinator.swift in Sources */,
 				E915534A265CB15A0075EC23 /* ConversionViewController.swift in Sources */,
@@ -325,6 +359,8 @@
 				E915530A265CA38E0075EC23 /* AppDelegate.swift in Sources */,
 				E915530C265CA38E0075EC23 /* SceneDelegate.swift in Sources */,
 				E9155343265CAFAB0075EC23 /* ModuleFactory.swift in Sources */,
+				E9954943265D6ED900588F44 /* Endpoint.swift in Sources */,
+				E995493C265D6C6B00588F44 /* BTGConversionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
