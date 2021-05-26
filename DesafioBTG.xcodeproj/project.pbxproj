@@ -33,6 +33,11 @@
 		E998B8DD265DC8D500CF2A68 /* CurrencyMock.json in Resources */ = {isa = PBXBuildFile; fileRef = E998B8DC265DC8D500CF2A68 /* CurrencyMock.json */; };
 		E998B8DF265DCDCA00CF2A68 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8DE265DCDCA00CF2A68 /* ConversionView.swift */; };
 		E998B8E2265DD16B00CF2A68 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8E1265DD16B00CF2A68 /* ViewModelFactory.swift */; };
+		E998B8E4265DE91900CF2A68 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8E3265DE91900CF2A68 /* UIView + Extensions.swift */; };
+		E998B8E9265DFB9000CF2A68 /* BTGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8E8265DFB9000CF2A68 /* BTGButton.swift */; };
+		E998B8EC265E02B500CF2A68 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8EB265E02B500CF2A68 /* LoadingView.swift */; };
+		E998B8EE265E0ACB00CF2A68 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8ED265E0ACB00CF2A68 /* UserDefaults.swift */; };
+		E998B8F1265E139600CF2A68 /* ConversionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8F0265E139600CF2A68 /* ConversionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,11 @@
 		E998B8DC265DC8D500CF2A68 /* CurrencyMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyMock.json; sourceTree = "<group>"; };
 		E998B8DE265DCDCA00CF2A68 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
 		E998B8E1265DD16B00CF2A68 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		E998B8E3265DE91900CF2A68 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		E998B8E8265DFB9000CF2A68 /* BTGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTGButton.swift; sourceTree = "<group>"; };
+		E998B8EB265E02B500CF2A68 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E998B8ED265E0ACB00CF2A68 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		E998B8F0265E139600CF2A68 /* ConversionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +148,7 @@
 			children = (
 				E915533A265CA6DD0075EC23 /* Application */,
 				E9155339265CA6D10075EC23 /* Commons */,
+				E998B8E7265DFB7B00CF2A68 /* Components */,
 				E995493D265D6E0900588F44 /* Models */,
 				E9155344265CB0FC0075EC23 /* Modules */,
 				E9DA2024265D5B91009693A9 /* Network */,
@@ -172,9 +183,11 @@
 		E9155339265CA6D10075EC23 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				E998B8E0265DD15900CF2A68 /* Factories */,
 				E915533D265CAD270075EC23 /* MainCoordinator.swift */,
+				E998B8ED265E0ACB00CF2A68 /* UserDefaults.swift */,
 				E915533B265CA7410075EC23 /* ViewCodable.swift */,
+				E998B8EA265E02A700CF2A68 /* Extensions */,
+				E998B8E0265DD15900CF2A68 /* Factories */,
 				E915533F265CAF530075EC23 /* Protocols */,
 			);
 			path = Commons;
@@ -209,6 +222,7 @@
 		E9155345265CB1050075EC23 /* ConversionModule */ = {
 			isa = PBXGroup;
 			children = (
+				E998B8EF265E138700CF2A68 /* Protocols */,
 				E9155349265CB15A0075EC23 /* ConversionViewController.swift */,
 				E998B8DE265DCDCA00CF2A68 /* ConversionView.swift */,
 			);
@@ -277,13 +291,38 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		E998B8E7265DFB7B00CF2A68 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E998B8E8265DFB9000CF2A68 /* BTGButton.swift */,
+				E998B8EB265E02B500CF2A68 /* LoadingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E998B8EA265E02A700CF2A68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E998B8E3265DE91900CF2A68 /* UIView + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E998B8EF265E138700CF2A68 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E998B8F0265E139600CF2A68 /* ConversionDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		E9DA2024265D5B91009693A9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E995494B265D92A100588F44 /* Services */,
-				E9954942265D6ED900588F44 /* Endpoint.swift */,
 				E9954944265D7F4900588F44 /* BTGNetworking.swift */,
+				E9954942265D6ED900588F44 /* Endpoint.swift */,
 				E995494C265D92C700588F44 /* Service.swift */,
+				E995494B265D92A100588F44 /* Services */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -418,8 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E998B8E4265DE91900CF2A68 /* UIView + Extensions.swift in Sources */,
 				E995494F265D930C00588F44 /* BTGQuotesService.swift in Sources */,
 				E995494A265D928000588F44 /* ConversionViewModel.swift in Sources */,
+				E998B8EC265E02B500CF2A68 /* LoadingView.swift in Sources */,
 				E9954941265D6E7600588F44 /* CurrenciesModel.swift in Sources */,
 				E995494D265D92C700588F44 /* Service.swift in Sources */,
 				E995493F265D6E1300588F44 /* QuotesModel.swift in Sources */,
@@ -428,10 +469,13 @@
 				E9954945265D7F4900588F44 /* BTGNetworking.swift in Sources */,
 				E9155348265CB1390075EC23 /* CurrencyViewController.swift in Sources */,
 				E9155341265CAF600075EC23 /* Coordinator.swift in Sources */,
+				E998B8F1265E139600CF2A68 /* ConversionDelegate.swift in Sources */,
 				E915534A265CB15A0075EC23 /* ConversionViewController.swift in Sources */,
 				E915533C265CA7410075EC23 /* ViewCodable.swift in Sources */,
+				E998B8EE265E0ACB00CF2A68 /* UserDefaults.swift in Sources */,
 				E915530A265CA38E0075EC23 /* AppDelegate.swift in Sources */,
 				E915530C265CA38E0075EC23 /* SceneDelegate.swift in Sources */,
+				E998B8E9265DFB9000CF2A68 /* BTGButton.swift in Sources */,
 				E998B8D5265DC16900CF2A68 /* CurrencyViewModel.swift in Sources */,
 				E9155343265CAFAB0075EC23 /* ModuleFactory.swift in Sources */,
 				E9954943265D6ED900588F44 /* Endpoint.swift in Sources */,

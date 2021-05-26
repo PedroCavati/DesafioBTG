@@ -8,5 +8,9 @@
 import UIKit
 
 class CurrencyViewController: UIViewController {
-    
+    override func loadView() {
+        let view = UIView()
+        view.backgroundColor = .blue
+        self.view = view
+    }
 }

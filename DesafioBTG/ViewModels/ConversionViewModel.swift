@@ -17,4 +17,11 @@ final class ConversionViewModel {
     func fetchQuotes(completion: @escaping (Result<QuotesModel, Error>) -> Void) {
         service.getQuotes(completion)
     }
+    
+    func convert(value: Double, originQuote: Double, destinationQuote: Double) -> String {
+        if destinationQuote == 1.0 {
+            return String(format: "%.2f", value / originQuote)
+        }
+        return String(format: "%.2f", (value / originQuote) * destinationQuote)
+    }
 }

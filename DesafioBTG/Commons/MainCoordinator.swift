@@ -14,15 +14,19 @@ class MainCoordinator: Coordinator {
     init(navigationController: UINavigationController, moduleFactory: ModuleFactory) {
         self.navigationController = navigationController
         self.moduleFactory = moduleFactory
-        start()
     }
     
+    /**
+     This method will get a ConversionViewController from the ModuleFactory and push it to the navigationController
+     */
     func start() {
-//        let conversionModule = moduleFactory.makeConversionModule()
+        let conversionModule = moduleFactory.makeConversionModule()
+        navigationController.pushViewController(conversionModule, animated: true)
     }
     
-    func telaNova() {
-//        let telaNova = moduleFactory.makeCurrencyModule()
+    func presentCurrencyModule() {
+        let currencyModule = moduleFactory.makeCurrencyModule()
+        navigationController.pushViewController(currencyModule, animated: true)
     }
     
 }

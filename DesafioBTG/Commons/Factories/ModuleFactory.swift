@@ -14,7 +14,9 @@ final class ModuleFactory {
     }
 
     func makeCurrencyModule() -> CurrencyViewController {
-        CurrencyViewController()
+        let vc = CurrencyViewController()
+        vc.modalPresentationStyle = .pageSheet
+        return vc
     }
     
 }
