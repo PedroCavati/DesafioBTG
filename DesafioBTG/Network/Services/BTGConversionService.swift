@@ -7,10 +7,8 @@
 
 import Foundation
 
-protocol ConversionService {
-    var network: Networking { get }
+protocol ConversionService: Service {
     func getQuotes(_ completion: @escaping (Result<QuotesModel, Error>) -> Void)
-    func getCurrencies(_ completion: @escaping (Result<CurrenciesModel, Error>) -> Void)
 }
 
 struct BTGConversionService: ConversionService {
@@ -18,9 +16,5 @@ struct BTGConversionService: ConversionService {
     
     func getQuotes(_ completion: @escaping (Result<QuotesModel, Error>) -> Void) {
         network.execute(.quotes, completion: completion)
-    }
-    
-    func getCurrencies(_ completion: @escaping (Result<CurrenciesModel, Error>) -> Void) {
-        network.execute(.currencies, completion: completion)
     }
 }

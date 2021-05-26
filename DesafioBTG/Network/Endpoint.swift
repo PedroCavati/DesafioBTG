@@ -42,16 +42,12 @@ extension Endpoint: RequestProviding {
     }
     
     func makeUrlRequest(endpoint: String, httpMethod: HTTPMethods = .get) -> URLRequest? {
-        guard let url = URL(string: "http://api.currencylayer.com/\(endpoint)") else { return nil }
         
-        let body = ["access_key": "1d0fc6f013dff7075a2cdb5639036fe6"]
-        let bodyData = try? JSONSerialization.data(
-            withJSONObject: body,
-            options: []
-        )
+        let accessKey = "access_key=1d0fc6f013dff7075a2cdb5639036fe6"
+        
+        guard let url = URL(string: "http://api.currencylayer.com/\(endpoint)?\(accessKey)") else { return nil }
         
         var request = URLRequest(url: url)
-        request.httpBody = bodyData
         request.httpMethod = httpMethod.method
         
         return request
