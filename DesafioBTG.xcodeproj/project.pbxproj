@@ -24,6 +24,15 @@
 		E9954941265D6E7600588F44 /* CurrenciesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954940265D6E7600588F44 /* CurrenciesModel.swift */; };
 		E9954943265D6ED900588F44 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954942265D6ED900588F44 /* Endpoint.swift */; };
 		E9954945265D7F4900588F44 /* BTGNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954944265D7F4900588F44 /* BTGNetworking.swift */; };
+		E995494A265D928000588F44 /* ConversionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954949265D928000588F44 /* ConversionViewModel.swift */; };
+		E995494D265D92C700588F44 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E995494C265D92C700588F44 /* Service.swift */; };
+		E995494F265D930C00588F44 /* BTGQuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E995494E265D930C00588F44 /* BTGQuotesService.swift */; };
+		E9954953265D97E500588F44 /* ConversionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9954952265D97E500588F44 /* ConversionViewModelTests.swift */; };
+		E998B8D5265DC16900CF2A68 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8D4265DC16900CF2A68 /* CurrencyViewModel.swift */; };
+		E998B8D7265DC1D000CF2A68 /* CurrencyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8D6265DC1D000CF2A68 /* CurrencyViewModelTests.swift */; };
+		E998B8DD265DC8D500CF2A68 /* CurrencyMock.json in Resources */ = {isa = PBXBuildFile; fileRef = E998B8DC265DC8D500CF2A68 /* CurrencyMock.json */; };
+		E998B8DF265DCDCA00CF2A68 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8DE265DCDCA00CF2A68 /* ConversionView.swift */; };
+		E998B8E2265DD16B00CF2A68 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998B8E1265DD16B00CF2A68 /* ViewModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +76,16 @@
 		E9954940265D6E7600588F44 /* CurrenciesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesModel.swift; sourceTree = "<group>"; };
 		E9954942265D6ED900588F44 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E9954944265D7F4900588F44 /* BTGNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTGNetworking.swift; sourceTree = "<group>"; };
+		E9954949265D928000588F44 /* ConversionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewModel.swift; sourceTree = "<group>"; };
+		E995494C265D92C700588F44 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		E995494E265D930C00588F44 /* BTGQuotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTGQuotesService.swift; sourceTree = "<group>"; };
+		E9954952265D97E500588F44 /* ConversionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewModelTests.swift; sourceTree = "<group>"; };
+		E998B8D4265DC16900CF2A68 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
+		E998B8D6265DC1D000CF2A68 /* CurrencyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModelTests.swift; sourceTree = "<group>"; };
+		E998B8DB265DC8A600CF2A68 /* QuoteMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuoteMock.json; sourceTree = "<group>"; };
+		E998B8DC265DC8D500CF2A68 /* CurrencyMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyMock.json; sourceTree = "<group>"; };
+		E998B8DE265DCDCA00CF2A68 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
+		E998B8E1265DD16B00CF2A68 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,14 +136,15 @@
 		E9155308265CA38E0075EC23 /* DesafioBTG */ = {
 			isa = PBXGroup;
 			children = (
-				E9155317265CA3900075EC23 /* Info.plist */,
-				E9155312265CA3900075EC23 /* Assets.xcassets */,
 				E915533A265CA6DD0075EC23 /* Application */,
 				E9155339265CA6D10075EC23 /* Commons */,
-				E9155314265CA3900075EC23 /* LaunchScreen.storyboard */,
 				E995493D265D6E0900588F44 /* Models */,
 				E9155344265CB0FC0075EC23 /* Modules */,
-				E9DA2024265D5B91009693A9 /* Service */,
+				E9DA2024265D5B91009693A9 /* Network */,
+				E9954947265D924000588F44 /* ViewModels */,
+				E9155312265CA3900075EC23 /* Assets.xcassets */,
+				E9155317265CA3900075EC23 /* Info.plist */,
+				E9155314265CA3900075EC23 /* LaunchScreen.storyboard */,
 			);
 			path = DesafioBTG;
 			sourceTree = "<group>";
@@ -132,6 +152,8 @@
 		E915531F265CA3900075EC23 /* DesafioBTGTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9954956265D9DDC00588F44 /* Mock */,
+				E998B8D8265DC25E00CF2A68 /* ViewModels */,
 				E9155320265CA3900075EC23 /* DesafioBTGTests.swift */,
 				E9155322265CA3900075EC23 /* Info.plist */,
 			);
@@ -150,8 +172,8 @@
 		E9155339265CA6D10075EC23 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				E998B8E0265DD15900CF2A68 /* Factories */,
 				E915533D265CAD270075EC23 /* MainCoordinator.swift */,
-				E9155342265CAFAB0075EC23 /* ModuleFactory.swift */,
 				E915533B265CA7410075EC23 /* ViewCodable.swift */,
 				E915533F265CAF530075EC23 /* Protocols */,
 			);
@@ -188,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				E9155349265CB15A0075EC23 /* ConversionViewController.swift */,
+				E998B8DE265DCDCA00CF2A68 /* ConversionView.swift */,
 			);
 			path = ConversionModule;
 			sourceTree = "<group>";
@@ -203,20 +226,66 @@
 		E995493D265D6E0900588F44 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E995493E265D6E1300588F44 /* QuotesModel.swift */,
 				E9954940265D6E7600588F44 /* CurrenciesModel.swift */,
+				E995493E265D6E1300588F44 /* QuotesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E9DA2024265D5B91009693A9 /* Service */ = {
+		E9954947265D924000588F44 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9954949265D928000588F44 /* ConversionViewModel.swift */,
+				E998B8D4265DC16900CF2A68 /* CurrencyViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E995494B265D92A100588F44 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				E995493B265D6C6B00588F44 /* BTGConversionService.swift */,
+				E995494E265D930C00588F44 /* BTGQuotesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E9954956265D9DDC00588F44 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				E998B8DB265DC8A600CF2A68 /* QuoteMock.json */,
+				E998B8DC265DC8D500CF2A68 /* CurrencyMock.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		E998B8D8265DC25E00CF2A68 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9954952265D97E500588F44 /* ConversionViewModelTests.swift */,
+				E998B8D6265DC1D000CF2A68 /* CurrencyViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E998B8E0265DD15900CF2A68 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				E9155342265CAFAB0075EC23 /* ModuleFactory.swift */,
+				E998B8E1265DD16B00CF2A68 /* ViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		E9DA2024265D5B91009693A9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E995494B265D92A100588F44 /* Services */,
 				E9954942265D6ED900588F44 /* Endpoint.swift */,
 				E9954944265D7F4900588F44 /* BTGNetworking.swift */,
+				E995494C265D92C700588F44 /* Service.swift */,
 			);
-			path = Service;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E998B8DD265DC8D500CF2A68 /* CurrencyMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,9 +418,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E995494F265D930C00588F44 /* BTGQuotesService.swift in Sources */,
+				E995494A265D928000588F44 /* ConversionViewModel.swift in Sources */,
 				E9954941265D6E7600588F44 /* CurrenciesModel.swift in Sources */,
+				E995494D265D92C700588F44 /* Service.swift in Sources */,
 				E995493F265D6E1300588F44 /* QuotesModel.swift in Sources */,
 				E915533E265CAD270075EC23 /* MainCoordinator.swift in Sources */,
+				E998B8DF265DCDCA00CF2A68 /* ConversionView.swift in Sources */,
 				E9954945265D7F4900588F44 /* BTGNetworking.swift in Sources */,
 				E9155348265CB1390075EC23 /* CurrencyViewController.swift in Sources */,
 				E9155341265CAF600075EC23 /* Coordinator.swift in Sources */,
@@ -358,9 +432,11 @@
 				E915533C265CA7410075EC23 /* ViewCodable.swift in Sources */,
 				E915530A265CA38E0075EC23 /* AppDelegate.swift in Sources */,
 				E915530C265CA38E0075EC23 /* SceneDelegate.swift in Sources */,
+				E998B8D5265DC16900CF2A68 /* CurrencyViewModel.swift in Sources */,
 				E9155343265CAFAB0075EC23 /* ModuleFactory.swift in Sources */,
 				E9954943265D6ED900588F44 /* Endpoint.swift in Sources */,
 				E995493C265D6C6B00588F44 /* BTGConversionService.swift in Sources */,
+				E998B8E2265DD16B00CF2A68 /* ViewModelFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +444,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9954953265D97E500588F44 /* ConversionViewModelTests.swift in Sources */,
 				E9155321265CA3900075EC23 /* DesafioBTGTests.swift in Sources */,
+				E998B8D7265DC1D000CF2A68 /* CurrencyViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

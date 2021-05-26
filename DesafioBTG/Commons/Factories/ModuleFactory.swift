@@ -7,10 +7,12 @@
 
 final class ModuleFactory {
     
-    func makeConversionModule() -> ConversionViewController {
-        ConversionViewController()
-    }
+    private let viewModelFactory = ViewModelFactory()
     
+    func makeConversionModule() -> ConversionViewController {
+        ConversionViewController(viewModel: viewModelFactory.makeConversionViewModel())
+    }
+
     func makeCurrencyModule() -> CurrencyViewController {
         CurrencyViewController()
     }
