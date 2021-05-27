@@ -231,9 +231,9 @@
 		E9155345265CB1050075EC23 /* ConversionModule */ = {
 			isa = PBXGroup;
 			children = (
-				E998B8EF265E138700CF2A68 /* Protocols */,
-				E9155349265CB15A0075EC23 /* ConversionViewController.swift */,
 				E998B8DE265DCDCA00CF2A68 /* ConversionView.swift */,
+				E9155349265CB15A0075EC23 /* ConversionViewController.swift */,
+				E998B8EF265E138700CF2A68 /* Protocols */,
 			);
 			path = ConversionModule;
 			sourceTree = "<group>";
@@ -241,9 +241,9 @@
 		E9155346265CB11D0075EC23 /* CurrencyModule */ = {
 			isa = PBXGroup;
 			children = (
-				E9C48DEF265E86B40068D717 /* CurrencyViewController.swift */,
 				E9C48DF1265E95070068D717 /* CurrencyCell.swift */,
 				E9C48DF3265E974E0068D717 /* CurrencyView.swift */,
+				E9C48DEF265E86B40068D717 /* CurrencyViewController.swift */,
 			);
 			path = CurrencyModule;
 			sourceTree = "<group>";
