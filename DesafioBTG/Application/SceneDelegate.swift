@@ -9,8 +9,8 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
-
+    lazy var window: UIWindow? = nil
+    lazy var coordinator: MainCoordinator? = nil
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         let moduleFactory = ModuleFactory()
         
-        let mainCoordinator = MainCoordinator(navigationController: navigationController, moduleFactory: moduleFactory)
-        mainCoordinator.start()
+        coordinator = MainCoordinator(navigationController: navigationController, moduleFactory: moduleFactory)
+        coordinator?.start()
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         

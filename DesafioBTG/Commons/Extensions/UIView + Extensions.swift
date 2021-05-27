@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Loading View
 extension UIView {
     
     public func startLoading() {
@@ -112,6 +113,25 @@ extension UIView {
 
         if heightConstant > 0 {
             anchors.append(heightAnchor.constraint(equalToConstant: heightConstant))
+        }
+
+        NSLayoutConstraint.activate(anchors)
+
+        return self
+    }
+    
+    @discardableResult
+    public func anchorSizeLessThanOrEqualTo(widthConstant: CGFloat = 0, heightConstant: CGFloat = 0) -> UIView {
+        translatesAutoresizingMaskIntoConstraints = false
+
+        var anchors = [NSLayoutConstraint]()
+
+        if widthConstant > 0 {
+            anchors.append(widthAnchor.constraint(lessThanOrEqualToConstant: widthConstant))
+        }
+
+        if heightConstant > 0 {
+            anchors.append(heightAnchor.constraint(lessThanOrEqualToConstant: heightConstant))
         }
 
         NSLayoutConstraint.activate(anchors)

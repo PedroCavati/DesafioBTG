@@ -5,8 +5,9 @@
 //  Created by Pedro Henrique Cavalcante de Sousa on 25/05/21.
 //
 
+import UIKit
+
 final class ModuleFactory {
-    
     private let viewModelFactory = ViewModelFactory()
     
     func makeConversionModule() -> ConversionViewController {
@@ -14,9 +15,7 @@ final class ModuleFactory {
     }
 
     func makeCurrencyModule() -> CurrencyViewController {
-        let vc = CurrencyViewController()
-        vc.modalPresentationStyle = .pageSheet
-        return vc
+        CurrencyViewController(viewModel: viewModelFactory.makeCurrencyViewModel())
     }
     
 }

@@ -36,20 +36,18 @@ enum Errors: Error {
 }
 
 protocol Networking {
-    var monitor: NWPathMonitor { get }
-    
     func execute<T: Decodable>(_ endpoint: Endpoint, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 final class BTGNetworking: Networking {
-    internal var monitor = NWPathMonitor()
-    
     func execute<T>(_ endpoint: Endpoint, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+        let monitor = NWPathMonitor()
+        
         monitor.pathUpdateHandler = { [weak self] path in
             if path.status == .satisfied {
                 guard let urlRequest = endpoint.urlRequest else {
                     // There is a connection, but it's an invalid URLRequest
-                    self?.monitor.cancel()
+                    monitor.cancel()
                     completion(.failure(Errors.invalidUrl))
                     return
                 }
@@ -58,14 +56,14 @@ final class BTGNetworking: Networking {
                     do {
                         if let error = error {
                             // There was an error while performing the URLSession
-                            self?.monitor.cancel()
+                            monitor.cancel()
                             completion(.failure(error))
                             return
                         }
                         
                         guard let data = data else {
                             // The URLSession succeded but there is no data
-                            self?.monitor.cancel()
+                            monitor.cancel()
                             completion(.failure(Errors.noData))
                             return
                         }
@@ -74,18 +72,19 @@ final class BTGNetworking: Networking {
                         let decodedObject = try JSONDecoder().decode(T.self, from: data)
                         
                         // The URLSession succeded and the data was decoded
-                        self?.monitor.cancel()
+                        monitor.cancel()
                         completion(.success(decodedObject))
                     } catch {
                         
                         // The decoding failed
-                        self?.monitor.cancel()
+                        monitor.cancel()
                         completion(.failure(Errors.decoding))
                     }
                 }.resume()
             } else {
                 guard let data = self?.fetchUserDefaults(object: T.self) else {
                     // There is no connection and no stored data
+                    monitor.cancel()
                     completion(.failure(Errors.noStoredData))
                     return
                 }
@@ -93,12 +92,12 @@ final class BTGNetworking: Networking {
                     let decodedObject = try JSONDecoder().decode(T.self, from: data)
                     
                     // There is no connection, but the stored data was decoded
-                    self?.monitor.cancel()
+                    monitor.cancel()
                     completion(.success(decodedObject))
                 } catch {
                     
                     // The decoding failed
-                    self?.monitor.cancel()
+                    monitor.cancel()
                     completion(.failure(Errors.decoding))
                 }
             }

@@ -14,10 +14,10 @@ final class ViewModelFactory {
     private lazy var conversionService: ConversionService = BTGConversionService(network: networking)
     
     func makeCurrencyViewModel() -> CurrencyViewModel {
-        return CurrencyViewModel(service: currencyService)
+        CurrencyViewModel(service: currencyService)
     }
     
     func makeConversionViewModel() -> ConversionViewModel {
-        return ConversionViewModel(service: conversionService)
+        ConversionViewModel(service: conversionService)
     }
 }
