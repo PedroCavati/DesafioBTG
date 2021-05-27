@@ -37,5 +37,17 @@ class ConversionViewModelTests: XCTestCase {
         XCTAssertNotNil(models)
         
     }
+    
+    func testConversion() {
+        
+        let value = 4.0
+        let ogQuote = 2.0
+        let destQuote = 3.0
+        
+        let converted = sut.convert(value: value, originQuote: ogQuote, destinationQuote: destQuote)
+        
+        XCTAssertTrue(converted == "6.00")
+        
+    }
 
 }
