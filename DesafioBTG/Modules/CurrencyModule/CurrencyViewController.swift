@@ -178,26 +178,3 @@ extension CurrencyViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-
-// MARK: - UISearchBarDelegate
-extension CurrencyViewController: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if searchText.isEmpty {
-//            currenciesDataSource = currencies
-//            favoritesDataSource = favorites
-//            return
-//        }
-//
-//        currenciesDataSource = currencies?.filter({ viewModel -> Bool in
-//            let filter1 = viewModel.key.contains(searchText)
-//            let filter2 = viewModel.description.contains(searchText)
-//            return filter1 || filter2
-//        })
-//
-//        favoritesDataSource = favorites?.filter({ viewModel -> Bool in
-//            let filter1 = viewModel.key.contains(searchText)
-//            let filter2 = viewModel.description.contains(searchText)
-//            return filter1 || filter2
-//        })
-//    }
-}
