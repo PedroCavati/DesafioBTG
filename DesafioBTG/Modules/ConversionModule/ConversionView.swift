@@ -9,6 +9,7 @@ import UIKit
 
 class ConversionView: UIView {
     
+    // MARK: - Views
     private let containerView = UIView()
     
     private let originTextField: UITextField = {
@@ -48,8 +49,13 @@ class ConversionView: UIView {
         return button
     }()
     
+    // MARK: - Delegate
     weak var conversionDelegate: ConversionDelegate?
     
+    // MARK: - Callback
+    var navigateToCurrencyModule: ((_: ButtonType) -> Void)?
+    
+    // MARK: - Initializers
     init() {
         super.init(frame: .zero)
         setupView()
@@ -60,8 +66,9 @@ class ConversionView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Methods
     @objc
-    func convertButtonTapped() {
+    private func convertButtonTapped() {
         if let value = Double(originTextField.text?.replacingOccurrences(of: ",", with: ".") ?? "") {
             destinationTextField.text = conversionDelegate?.convert(value: value,
                                                                     origin: originButton.title(for: .normal) ?? "",
@@ -69,8 +76,28 @@ class ConversionView: UIView {
         }
     }
     
+    @objc
+    private func originButtonTapped() {
+        navigateToCurrencyModule?(.origin)
+    }
+    
+    @objc
+    private func destinationButtonTapped() {
+        navigateToCurrencyModule?(.destination)
+    }
+    
+    func setButton(with key: String, type: ButtonType) {
+        switch type {
+        case .origin:
+            originButton.setTitle(key, for: .normal)
+        case .destination:
+            destinationButton.setTitle(key, for: .normal)
+        }
+    }
+    
 }
 
+// MARK: - ViewCodable
 extension ConversionView: ViewCodable {
     func buildViewHierarchy() {
         containerView.addSubview(originTextField)
@@ -114,5 +141,7 @@ extension ConversionView: ViewCodable {
         backgroundColor = .systemBackground
         
         convertButton.addTarget(self, action: #selector(convertButtonTapped), for: .touchUpInside)
+        originButton.addTarget(self, action: #selector(originButtonTapped), for: .touchUpInside)
+        destinationButton.addTarget(self, action: #selector(destinationButtonTapped), for: .touchUpInside)
     }
 }
